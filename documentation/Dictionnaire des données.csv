@@ -20,5 +20,6 @@ idCreneau,,INT
 dateCreneau,Date d'un créneau,DATE
 heureDebutCreneau,Heure du début d'un créneau,DATE
 heureFinCreneau,Heure de fin d'un créneau,DATE
+Statut Créneaux
 idStatutCreneau,,INT
 statutCreneau,"Défini dispo, pas dispo, peut-être, par défaut",SMALLINT
