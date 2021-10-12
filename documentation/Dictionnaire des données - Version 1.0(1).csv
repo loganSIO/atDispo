@@ -1,0 +1,24 @@
+Nom,Commentaire,Type
+Jours spéciaux,,
+idJoursSpeciaux,,INT
+joursSpeciauxDebut,Début d'un jour spécial,DATE
+joursSpeciauxFin,Fin d'un jour spécial,DATE
+joursSpeciauxDescription,Description d'un jour spécial (armistrice...),TEXT
+joursSpeciauxType,"Type du jour spécial (fériés, congés)",TEXT
+Utilisateurs,,
+idUtilisateur,,INT
+statutCompte,Actif ou inactif,INT
+nomUtilisateur,Nom d'un utilisateur,TEXT
+prenomUtilisateur,Prénom d'un utilisateur,TEXT
+mailUtilisateur,Mail d'un utilisateur,VARCHAR
+mdpUtilisateur,Mot de passe utilisateur,VARCHAR
+Formations,,
+idFormation,,INT
+nomFormation,Nom de la ou les formations ,TEXT
+Crénaux,,
+idCrenau,,INT
+dateCrenau,Date d'un crénau,DATE
+heureDebutCrenau,Heure du début d'un créneau,DATE
+heureFinCrenau,Heure de fin d'un crénau,DATE
+idStatutCrenau,,
+statutCrenau,"Défini dispo, pas dispo, peut-être, par défaut",SMALLINT
