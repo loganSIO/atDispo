@@ -15,10 +15,10 @@ mdpUtilisateur,Mot de passe utilisateur,VARCHAR
 Formations,,
 idFormation,,INT
 nomFormation,Nom de la ou les formations ,TEXT
-Crénaux,,
-idCrenau,,INT
-dateCrenau,Date d'un crénau,DATE
-heureDebutCrenau,Heure du début d'un créneau,DATE
-heureFinCrenau,Heure de fin d'un crénau,DATE
-idStatutCrenau,,
-statutCrenau,"Défini dispo, pas dispo, peut-être, par défaut",SMALLINT
+Créneaux,,
+idCreneau,,INT
+dateCreneau,Date d'un créneau,DATE
+heureDebutCreneau,Heure du début d'un créneau,DATE
+heureFinCreneau,Heure de fin d'un créneau,DATE
+idStatutCreneau,,INT
+statutCreneau,"Défini dispo, pas dispo, peut-être, par défaut",SMALLINT
