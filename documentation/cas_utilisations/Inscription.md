@@ -33,7 +33,6 @@
 L'enchainement A1 démarre au point 4 du scénario nominal.
 
 	1. le portail d'inscription indique que les mots de passe ne correspondent pas.
-	2. 
 Le scénario nominal reprend au point 3.
 
 *A2 : un ou plusieurs champs ne sont pas remplis*
@@ -42,5 +41,4 @@ L'enchainement A2 démarre au point 4 du scénario nominal.
 
 	1. le portail d'inscription indique qu'un ou plusieurs champs ne sont pas remplis et / ou sont requis
 	2. remplir les champs correspondant avec vos informations
-	3. 
 Le scénario nominal reprend au point 4.
