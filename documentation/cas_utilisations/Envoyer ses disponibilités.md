@@ -1,0 +1,44 @@
+**Sommaire d’identification**
+
+  **Titre** : Envoyer ses disponibilités
+
+  **Résumé** : L'intervenant envoie ses disponibilités en format pdf par e-mail à un responsable pédagogique n'ayant pas de compte sur l'application
+
+  **Acteurs** : Intervenant
+
+  **Date de création** : 09/11/2021
+
+  **Date de mise à jour**  : 09/11/2021
+
+  **Version** : 1.0
+
+  **Responsable** : LE-NEVEZ Logan
+
+
+
+**Description des scénarios**
+
+*Préconditions*
+
+- Être connecté à internet.
+- Être connecté sur l'application.
+- Connaître l'e-mail de son destinataire.
+
+*Scénario nominal*
+
+1. Se rendre dans l'onglet "Mon Calendrier".
+2. Cliquer sur le bouton "Envoyer mon calendrier".
+3. Une fenêtre s'ouvre afin de rentrer l'e-mail du destinataire ainsi que les paramètres d'envoi.
+4. Cliquer sur envoyer.
+
+**Enchaînements alternatifs**
+
+*A1 : e-mail invalide*
+
+L'enchaînement A1 démarre au point 4 du scénario nominal.
+
+1. L'application rapporte une erreur concernant l'e-mail du destinataire. Cela est du au fait que l'e-mail est faux.
+
+2. Demander au destinataire en question de confirmer l'ortographe de son e-mail.
+
+   Le scénario nominal reprend au point 2.
