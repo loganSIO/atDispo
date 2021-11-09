@@ -1,8 +1,8 @@
 **Sommaire d’identification**
 
-  **Titre** : Réservation d'un créneau chez un intervenant
+  **Titre** : Visualiser les créneaux affecté pour une formation
 
-  **Résumé** : En tant que responsable pédagogique, réserve un créneau sur le planning d'un intervenant dont il est responsable.
+  **Résumé** : Sur la page de disponibiliutés d'un intervenant, possiblité de visualiser uniquement les créneaux affectés par une formation. (Filtre)
 
   **Acteurs** : Responsable pédagogique
 
@@ -23,17 +23,15 @@
 - Être connecté à internet
 - Être connecté sur son compte responsable pédagogique
 - Visualiser le tableau de disponibilités d'un intervenant ayant donné les droits
-- Être le responsable pédagogique de l'intervenant en question, concernant la formation à reserver
+- Être le responsable pédagogique de l'intervenant en question, concernant les créneaux de la formation à visulaiser
 
 *Scénario nominal*
 
-1. Cliquer sur le créneau à réserver (sélection)
+1. Cliquer sur le menu déroulant "Filtre par formation"
 
-2. Cliquer sur le menu déroulant qui s'affiche en bas/à coté du planning et choisir la formation voulue
+2. Sélectionner la formation dont on veut visualiser les créneaux
 
-3. Cliquer sur le bouton "Demande de réservation"
-
-
+3. Cliquer sur "Valider" pour rafraichir l'affichage du planning
 
 
 
@@ -46,6 +44,3 @@ L'enchaînement A1 démarre au point 2 du scénario nominal.
     Après avoir sélectionné un créneau, aucune formation n'apparait lorqu'on clique sur le menu déroulant des formations,
     le responsable pédagogique n'est responsable d'aucunes formations en commun avec l'intervenant sélectionné.
 -----------------------------------------------------------
-
-
-
