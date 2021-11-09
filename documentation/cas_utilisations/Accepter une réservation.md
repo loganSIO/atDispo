@@ -1,0 +1,41 @@
+**Sommaire d’identification**
+
+  **Titre** : Accepter une réservation
+
+  **Résumé** : Accepter une réservation de créneau faite par un responsable pédagogique
+
+  **Acteurs** : Intervenant
+
+  **Date de création** : 09/11/2021
+
+  **Date de mise à jour**  : 09/11/2021
+
+  **Version** : 1.0
+
+  **Responsable** : LE-NEVEZ Logan
+
+
+
+**Description des scénarios**
+
+*Préconditions*
+
+- Être connecté à internet
+- Être connecté sur l'application
+
+*Scénario nominal*
+
+1. Un responsable pédagogique a réservé un créneau pour un intervenant.
+2. L'intervenant reçoit une notification par mail l'informant qu'un créneau a été réservé.
+3. Le créneau en question passe du statut disponible à indisponible sur le calendrier de l'intervenant.
+
+**Enchaînements alternatifs**
+
+*A1: l'intervenant ne souhaite pas que ce créneau soit réservé*
+
+L'enchaînement A1 commence au point 3. du scénario nominal.
+
+1. L'intervenant peut changer le statut du créneau réservé d'indisponible à disponible ou éventuellement disponible (voir la manipulation dans "Droits de consultation.md").
+2. L'intervenant devra notifier au responsable pédagogique de son changement de statut.
+
+Le scénario nominal reprend au point 1.
