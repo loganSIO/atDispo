@@ -9,7 +9,7 @@
     <title>@yield('title', config('app.name'))</title>
   </head>
 
-  <body>
+  <body class="has-background-light">
 
     <header>
       <nav class="navbar is-info" role="navigation" aria-label="main navigation">
@@ -57,7 +57,7 @@
 
     </header>
 
-    <main class="has-background-light">
+    <main>
 
       <p>Popaul</p>
 
