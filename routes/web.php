@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FullCalenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return view('pages/form');
 });
+
+Route::get('calendrier', [FullCalenderController::class, 'index']);
+Route::post('calendrier/action', [FullCalenderController::class, 'action']);
