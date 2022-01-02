@@ -13,6 +13,11 @@
             right: 'dayGridMonth,timeGridWeek,listWeek'
           },
 
+          dateClick:function(info){
+            $('#event').modal("show");
+
+          }
+
         });
 
         calendar.render();
