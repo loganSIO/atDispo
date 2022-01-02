@@ -62,8 +62,14 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+
+          <button type="button" class="btn btn-success" id="btnSauvegarder">Sauvegarder</button>
+          <button type="button" class="btn btn-warning" id="btnModifier">Modifier</button>
+          <button type="button" class="btn btn-danger" id="btnSupprimer">Supprimer</button>
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+
         </div>
       </div>
     </div>

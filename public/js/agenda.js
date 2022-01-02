@@ -1,4 +1,7 @@
       document.addEventListener('DOMContentLoaded', function() {
+
+        let formulaire = document.querySelector("form");
+
         var calendarEl = document.getElementById('agenda');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -21,4 +24,12 @@
         });
 
         calendar.render();
+
+        document.getElementById("btnSauvegarder").addEventListener("click", function(){
+          const date = new FormData(formulaire);
+          console.log(date);
+          console.log(formulaire.title.value);
+
+        });
+
       });
