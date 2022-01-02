@@ -27,8 +27,23 @@
 
         document.getElementById("btnSauvegarder").addEventListener("click", function(){
           const date = new FormData(formulaire);
+
           console.log(date);
           console.log(formulaire.title.value);
+
+          axios.post("http://127.0.0.1:8000/calendrier/ajouter", date).
+          then(
+            (reponse) => {
+              $("#event").modal("hide");
+            }
+          ).catch(
+            error=>{
+              if(error.response){
+                console.log(error.response.data);
+              }
+            }
+
+          )
 
         });
 

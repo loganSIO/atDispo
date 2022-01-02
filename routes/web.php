@@ -17,6 +17,8 @@ use App\Http\Controllers\FullCalenderController;
 
 Route::get('/calendrier', [App\Http\Controllers\EventController::class, 'index']);
 
+Route::post('/calendrier/ajouter', [App\Http\Controllers\EventController::class, 'store']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
