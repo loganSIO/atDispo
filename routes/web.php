@@ -22,5 +22,8 @@ Route::get('/', function () {
     return view('pages/form');
 });
 
-Route::get('calendrier', [FullCalenderController::class, 'index']);
-Route::post('calendrier/action', [FullCalenderController::class, 'action']);
+Route::get('/calendrier', [App\Http\Controllers\EventController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
