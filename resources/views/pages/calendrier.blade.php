@@ -49,13 +49,13 @@
 
             <div class="form-group">
               <label for="start">Début</label>
-              <input type="text" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
+              <input type="date" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
             <div class="form-group">
               <label for="end">Fin</label>
-              <input type="text" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
+              <input type="date" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 

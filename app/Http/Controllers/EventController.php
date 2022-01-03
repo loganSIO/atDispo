@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
+use Carbon\Carbon;
+
 class EventController extends Controller
 {
     /**
@@ -60,6 +62,10 @@ class EventController extends Controller
     public function edit($id)
     {
         $event=Event::find($id);
+        
+        $event->start=Carbon::createFromFormat('Y-m-d H:i:s', $event->start)->format('Y-m-d');
+        $event->end=Carbon::createFromFormat('Y-m-d H:i:s', $event->end)->format('Y-m-d');
+
         return response()->json($event);
     }
 

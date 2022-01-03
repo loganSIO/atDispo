@@ -36,6 +36,13 @@
               (reponse) => {
 
                 formulaire.id.value=reponse.data.id;
+                formulaire.title.value=reponse.data.title;
+
+                formulaire.description.value=reponse.data.description;
+
+                formulaire.start.value=reponse.data.start;
+                formulaire.end.value=reponse.data.end;
+
 
                 $("#event").modal("show");
               }
