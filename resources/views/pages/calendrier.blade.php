@@ -4,15 +4,9 @@
 <div class="container">
 
   <div id="agenda">
-    calendrier
   </div>
 
 </div>
-
-<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#event">
-  Launch
-</button>
-
 
   <div class="modal fade" id="event" tabindex="-1" role="dialog" aria-labelledby="modelTitleId">
     <div class="modal-dialog" role="document">
@@ -26,11 +20,11 @@
         <div class="modal-body">
 
 
-          <form action="">
+          <form action="" id="formulaireEvent">
 
             {!! csrf_field() !!}
 
-            <div class="form-group">
+            <div class="form-group d-none">
               <label for="id">ID</label>
               <input type="text" class="form-control" name="id" id="id" aria-describeby="helpId" placeholder="">
               <small id="helpId" class="form-text text-muted">Help Text</small>
@@ -39,7 +33,7 @@
             <div class="form-group">
               <label for="">Titre</label>
               <input type="text" class="form-control" name="title" id="title" aria-describeby="helpId" placeholder="Titre de l'évènement">
-              <small id="helpId" class="form-text text-muted">Help Text</small>
+              <!--<small id="helpId" class="form-text text-muted">Écrivez votre cours du jour</small>-->
             </div>
 
             <div class="form-group">
@@ -47,13 +41,13 @@
               <textarea class="form-control" name="description" id="description" rows="3"></textarea>
             </div>
 
-            <div class="form-group">
+            <div class="form-group d-none">
               <label for="start">Début</label>
               <input type="date" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
-            <div class="form-group">
+            <div class="form-group d-none">
               <label for="end">Fin</label>
               <input type="date" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>

@@ -1,6 +1,6 @@
       document.addEventListener('DOMContentLoaded', function() {
 
-        let formulaire = document.querySelector("form");
+        let formulaire = document.querySelector("#formulaireEvent");
 
         var calendarEl = document.getElementById('agenda');
 
@@ -9,14 +9,21 @@
           initialView: 'dayGridMonth',
 
           locale: "fr",
-
+          displayEventTime:false,
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,listWeek'
           },
 
-          events: "http://127.0.0.1:8000/calendrier/afficher",
+        //  events: baseURL + "/calendrier/afficher",
+        eventSources: {
+          url: baseURL + "/calendrier/afficher",
+          method:"POST",
+          extraParams: {
+            _token: formulaire._token.value,
+          }
+        },
 
           dateClick:function(info){
             formulaire.reset();
@@ -31,7 +38,7 @@
             var event=info.event;
             console.log(event);
 
-            axios.post("http://127.0.0.1:8000/calendrier/modifier/"+info.event.id).
+            axios.post(baseURL + "/calendrier/modifier/"+info.event.id).
             then(
               (reponse) => {
 
@@ -61,22 +68,25 @@
         calendar.render();
 
         document.getElementById("btnSauvegarder").addEventListener("click", function(){
-          envoyerDate("http://127.0.0.1:8000/calendrier/ajouter");
+          envoyerDate("/calendrier/ajouter");
 
         });
 
         document.getElementById("btnSupprimer").addEventListener("click", function(){
-          envoyerDate("http://127.0.0.1:8000/calendrier/supprimer/"+formulaire.id.value);
+          envoyerDate("/calendrier/supprimer/"+formulaire.id.value);
         });
 
         document.getElementById("btnModifier").addEventListener("click", function(){
-          envoyerDate("http://127.0.0.1:8000/calendrier/actualiser/"+formulaire.id.value);
+          envoyerDate("/calendrier/actualiser/"+formulaire.id.value);
         });
 
         function envoyerDate(url){
+
           const date = new FormData(formulaire);
 
-          axios.post(url, date).
+          const newURL = baseURL+url;
+
+          axios.post(newURL, date).
           then(
             (reponse) => {
               calendar.refetchEvents();
