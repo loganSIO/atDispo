@@ -26,6 +26,27 @@
 
             $('#event').modal("show");
 
+          },
+          eventClick:function(info){
+            var event=info.event;
+            console.log(event);
+
+            axios.post("http://127.0.0.1:8000/calendrier/modifier/"+info.event.id).
+            then(
+              (reponse) => {
+
+                formulaire.id.value=reponse.data.id;
+
+                $("#event").modal("show");
+              }
+            ).catch(
+              error=>{
+                if(error.response){
+                  console.log(error.response.data);
+                }
+              }
+
+            )
           }
 
         });

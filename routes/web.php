@@ -20,6 +20,9 @@ Route::get('/calendrier/afficher', [App\Http\Controllers\EventController::class,
 
 Route::post('/calendrier/ajouter', [App\Http\Controllers\EventController::class, 'store']);
 
+Route::post('/calendrier/modifier/{id}', [App\Http\Controllers\EventController::class, 'edit']);
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

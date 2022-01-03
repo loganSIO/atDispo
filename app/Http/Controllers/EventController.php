@@ -57,9 +57,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit($id)
     {
-        //
+        $event=Event::find($id);
+        return response()->json($event);
     }
 
     /**
