@@ -78,7 +78,9 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        request()->validate(Event::$rules);
+        $event->update($request->all());
+        return response()->json($event);
     }
 
     /**
@@ -90,6 +92,7 @@ class EventController extends Controller
     public function destroy($id)
     {
         $event=Event::find($id)->delete();
+
         return response()->json($event);
 
     }

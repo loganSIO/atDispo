@@ -69,6 +69,10 @@
           envoyerDate("http://127.0.0.1:8000/calendrier/supprimer/"+formulaire.id.value);
         });
 
+        document.getElementById("btnModifier").addEventListener("click", function(){
+          envoyerDate("http://127.0.0.1:8000/calendrier/actualiser/"+formulaire.id.value);
+        });
+
         function envoyerDate(url){
           const date = new FormData(formulaire);
 
