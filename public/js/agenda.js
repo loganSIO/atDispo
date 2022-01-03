@@ -15,10 +15,15 @@
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,listWeek'
           },
-          
+
           events: "http://127.0.0.1:8000/calendrier/afficher",
 
           dateClick:function(info){
+            formulaire.reset();
+
+            formulaire.start.value=info.dateStr;
+            formulaire.end.value=info.dateStr;
+
             $('#event').modal("show");
 
           }
@@ -36,6 +41,7 @@
           axios.post("http://127.0.0.1:8000/calendrier/ajouter", date).
           then(
             (reponse) => {
+              calendar.refetchEvents();
               $("#event").modal("hide");
             }
           ).catch(
