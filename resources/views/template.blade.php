@@ -4,6 +4,9 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="{{ asset('/favicon.ico') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('app.name'))</title>
@@ -59,9 +62,11 @@
 
     <main>
 
-      <p>Popaul</p>
+      @yield('content')
 
     </main>
+
+    <script src="{{asset('js/agenda.js')}}" defer></script>
 
     <footer class="has-background-info">
       <div class="content has-text-centered">
