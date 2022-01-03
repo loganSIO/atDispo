@@ -22,6 +22,8 @@ Route::post('/calendrier/ajouter', [App\Http\Controllers\EventController::class,
 
 Route::post('/calendrier/modifier/{id}', [App\Http\Controllers\EventController::class, 'edit']);
 
+Route::post('/calendrier/supprimer/{id}', [App\Http\Controllers\EventController::class, 'destroy']);
+
 
 Auth::routes();
 

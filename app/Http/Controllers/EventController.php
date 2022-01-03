@@ -62,7 +62,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event=Event::find($id);
-        
+
         $event->start=Carbon::createFromFormat('Y-m-d H:i:s', $event->start)->format('Y-m-d');
         $event->end=Carbon::createFromFormat('Y-m-d H:i:s', $event->end)->format('Y-m-d');
 
@@ -87,8 +87,10 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy($id)
     {
-        //
+        $event=Event::find($id)->delete();
+        return response()->json($event);
+
     }
 }

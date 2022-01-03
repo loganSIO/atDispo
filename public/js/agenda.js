@@ -61,12 +61,18 @@
         calendar.render();
 
         document.getElementById("btnSauvegarder").addEventListener("click", function(){
+          envoyerDate("http://127.0.0.1:8000/calendrier/ajouter");
+
+        });
+
+        document.getElementById("btnSupprimer").addEventListener("click", function(){
+          envoyerDate("http://127.0.0.1:8000/calendrier/supprimer/"+formulaire.id.value);
+        });
+
+        function envoyerDate(url){
           const date = new FormData(formulaire);
 
-          console.log(date);
-          console.log(formulaire.title.value);
-
-          axios.post("http://127.0.0.1:8000/calendrier/ajouter", date).
+          axios.post(url, date).
           then(
             (reponse) => {
               calendar.refetchEvents();
@@ -80,7 +86,6 @@
             }
 
           )
-
-        });
+        }
 
       });
