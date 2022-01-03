@@ -16,6 +16,7 @@ use App\Http\Controllers\FullCalenderController;
 
 
 Route::get('/calendrier', [App\Http\Controllers\EventController::class, 'index']);
+Route::get('/calendrier/afficher', [App\Http\Controllers\EventController::class, 'show']);
 
 Route::post('/calendrier/ajouter', [App\Http\Controllers\EventController::class, 'store']);
 

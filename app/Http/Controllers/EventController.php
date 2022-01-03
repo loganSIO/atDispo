@@ -47,7 +47,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $event=Event::all();
+        return response()->json($event);
     }
 
     /**
