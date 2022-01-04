@@ -6,6 +6,8 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
 
+          // Options du calendrier
+
           initialView: 'timeGridWeek',
           weekends:true,
           locale: "fr",
@@ -26,6 +28,8 @@
             _token: formulaire._token.value,
           }
         },
+
+        // Création des évènements jours fériés
 
         events: [
           {
@@ -107,6 +111,8 @@
 
         ],
 
+        // Apparition du modal (présent dans la vue calendrier) lorsqu'on clique sur une case du calendrier
+
           dateClick:function(info){
             formulaire.reset();
 
@@ -116,6 +122,9 @@
             $('#event').modal("show");
 
           },
+
+          // Ajout d'un évènement dans le calendrier
+
           eventClick:function(info){
             var event=info.event;
             console.log(event);
@@ -149,9 +158,10 @@
 
         calendar.render();
 
+        /* Intéractions base de donner */
+
         document.getElementById("btnSauvegarder").addEventListener("click", function(){
           envoyerDate("/calendrier/ajouter");
-
         });
 
         document.getElementById("btnSupprimer").addEventListener("click", function(){
@@ -161,6 +171,8 @@
         document.getElementById("btnModifier").addEventListener("click", function(){
           envoyerDate("/calendrier/actualiser/"+formulaire.id.value);
         });
+
+        // Actualisation des évènements en temps réel
 
         function envoyerDate(url){
 
