@@ -38,18 +38,33 @@
 
             <div class="form-group">
               <label for="description">Description</label>
-              <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+              <textarea class="form-control" name="description" id="description" rows="3" placeholder="Informations complémentaires : nom de la formation, salle de cours..."></textarea>
             </div>
 
-            <div class="form-group d-none">
-              <label for="start">Début</label>
-              <input type="date" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
+            <div class="form-group">
+              <label for="statutCreneau">Statut du crénau</label>
+              <select class="form-control" id="statutCreneau" name="statutCreneau">
+                <option value="1">Disponible</option>
+                <option value="2">Disponibilité possible, mais incertaine</option>
+                <option value="3">Indisponible</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="start">Couleur</label>
+              <input type="color" class="form-control" name="color" id="color" aria-describeby="helpId" value="#BF4040">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
-            <div class="form-group d-none">
+            <div class="form-group">
+              <label for="start">Début</label>
+              <input type="text" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
+              <small id="helpId" class="form-text text-muted">Help Text</small>
+            </div>
+
+            <div class="form-group">
               <label for="end">Fin</label>
-              <input type="date" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
+              <input type="text" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
@@ -61,8 +76,9 @@
 
           <button type="button" class="btn btn-success" id="btnSauvegarder">Sauvegarder</button>
           <button type="button" class="btn btn-warning" id="btnModifier">Modifier</button>
+          @if(Auth::user()->role=='0')
           <button type="button" class="btn btn-danger" id="btnSupprimer">Supprimer</button>
-
+          @endif
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
 
 

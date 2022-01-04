@@ -17,6 +17,8 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string("title", 255);
             $table->text("description");
+            $table->integer('statutCreneau');
+            $table->string("color");
             $table->dateTime("start");
             $table->dateTime("end");
             $table->timestamps();
