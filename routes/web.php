@@ -23,3 +23,5 @@ Route::post('/calendrier/actualiser/{event}', [App\Http\Controllers\EventControl
 Route::post('/calendrier/supprimer/{id}', [App\Http\Controllers\EventController::class, 'destroy']);
 
 });
+
+Route::get('/verify', 'App\Http\Controllers\Auth\RegisterController@verifyUser')->name('verify.user');
