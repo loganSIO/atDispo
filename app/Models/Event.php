@@ -12,9 +12,10 @@ class Event extends Model
     static $rules=[
       'title'=>'required',
       'description'=>'required',
+      'color'=>'required',
       'start'=>'required',
       'end'=>'required'
     ];
 
-    protected $fillable=['title','description','start','end'];
+    protected $fillable=['title','description','color','start','end'];
 }

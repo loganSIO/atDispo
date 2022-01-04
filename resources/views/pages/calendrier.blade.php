@@ -42,6 +42,12 @@
             </div>
 
             <div class="form-group">
+              <label for="start">Couleur</label>
+              <input type="color" class="form-control" name="color" id="color" aria-describeby="helpId" value="#BF4040">
+              <small id="helpId" class="form-text text-muted">Help Text</small>
+            </div>
+
+            <div class="form-group">
               <label for="start">Début</label>
               <input type="text" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
@@ -61,8 +67,9 @@
 
           <button type="button" class="btn btn-success" id="btnSauvegarder">Sauvegarder</button>
           <button type="button" class="btn btn-warning" id="btnModifier">Modifier</button>
+          @if(Auth::user()->role=='0')
           <button type="button" class="btn btn-danger" id="btnSupprimer">Supprimer</button>
-
+          @endif
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
 
 

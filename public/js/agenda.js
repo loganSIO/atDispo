@@ -7,12 +7,10 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
 
           initialView: 'timeGridWeek',
-          weekends:false,
+          weekends:true,
           locale: "fr",
           displayEventTime:true,
-          allDaySlot: false,
-          editable: true,
-          eventResizableFromStart: true,
+          allDaySlot: true,
 
           headerToolbar: {
             left: 'prev,next today',
@@ -31,10 +29,82 @@
 
         events: [
           {
-            title  : 'event1',
-            start  : '2022-01-05 12:00:00',
-            end    : '2022-01-05 13:00:00'
-          }
+            title  : 'Jour de l\'an',
+            start  : '2022-01-01',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Lundi de Pâques',
+            start  : '2022-04-18',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Fête du travail',
+            start  : '2022-05-01',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : '8 mai 1945',
+            start  : '2022-05-08',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Jeudi de l’Ascension',
+            start  : '2022-05-26',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Lundi de Pentecôte',
+            start  : '2022-06-06',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Fête nationale',
+            start  : '2022-07-14',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Assomption',
+            start  : '2022-08-15',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'La Toussaints',
+            start  : '2022-11-01',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Armistice',
+            start  : '2022-11-11',
+            allDay : true,
+            color  : 'orange'
+          },
+
+          {
+            title  : 'Noël',
+            start  : '2022-12-25',
+            allDay : true,
+            color  : 'orange'
+          },
+
         ],
 
           dateClick:function(info){
