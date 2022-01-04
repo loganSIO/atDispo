@@ -38,7 +38,16 @@
 
             <div class="form-group">
               <label for="description">Description</label>
-              <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+              <textarea class="form-control" name="description" id="description" rows="3" placeholder="Informations complémentaires : nom de la formation, salle de cours..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="statutCreneau">Statut du crénau</label>
+              <select class="form-control" id="statutCreneau" name="statutCreneau">
+                <option value="1">Disponible</option>
+                <option value="2">Disponibilité possible, mais incertaine</option>
+                <option value="3">Indisponible</option>
+              </select>
             </div>
 
             <div class="form-group">
