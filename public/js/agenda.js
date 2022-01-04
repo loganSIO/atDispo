@@ -6,14 +6,18 @@
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
 
-          initialView: 'dayGridMonth',
-
+          initialView: 'timeGridWeek',
+          weekends:false,
           locale: "fr",
-          displayEventTime:false,
+          displayEventTime:true,
+          allDaySlot: false,
+          editable: true,
+          eventResizableFromStart: true,
+
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,listWeek'
+            right: 'timeGridWeek,dayGridMonth,listWeek',
           },
 
         //  events: baseURL + "/calendrier/afficher",
@@ -24,6 +28,14 @@
             _token: formulaire._token.value,
           }
         },
+
+        events: [
+          {
+            title  : 'event1',
+            start  : '2022-01-05 12:00:00',
+            end    : '2022-01-05 13:00:00'
+          }
+        ],
 
           dateClick:function(info){
             formulaire.reset();

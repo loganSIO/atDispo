@@ -41,15 +41,15 @@
               <textarea class="form-control" name="description" id="description" rows="3"></textarea>
             </div>
 
-            <div class="form-group d-none">
+            <div class="form-group">
               <label for="start">Début</label>
-              <input type="date" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
+              <input type="text" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
-            <div class="form-group d-none">
+            <div class="form-group">
               <label for="end">Fin</label>
-              <input type="date" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
+              <input type="text" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
