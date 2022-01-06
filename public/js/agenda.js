@@ -13,6 +13,8 @@
           locale: "fr",
           displayEventTime:true,
           allDaySlot: true,
+          nowIndicator: true,
+          timeZone: 'Europe/Paris',
 
           headerToolbar: {
             left: 'prev,next today',
@@ -32,6 +34,16 @@
         // Création des évènements jours fériés
 
         events: [
+
+          {
+            title: 'Week-end',
+            daysOfWeek: [0, 6],
+            color: 'grey',
+            allDay: false,
+            startTime: '00:00',
+            endTime:'23:59',
+          },
+
           {
             title  : 'Jour de l\'an',
             start  : '2022-01-01',
@@ -123,7 +135,7 @@
 
           },
 
-          // Ajout d'un évènement dans le calendrier
+          // Modification d'un évènement dans le calendrier
 
           eventClick:function(info){
             var event=info.event;
@@ -137,6 +149,8 @@
                 formulaire.title.value=reponse.data.title;
 
                 formulaire.description.value=reponse.data.description;
+                formulaire.statutCreneau.value=reponse.data.statutCreneau;
+                formulaire.color.value=reponse.data.color;
 
                 formulaire.start.value=reponse.data.start;
                 formulaire.end.value=reponse.data.end;
