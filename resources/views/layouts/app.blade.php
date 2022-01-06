@@ -30,7 +30,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -93,5 +93,15 @@
 
         </main>
     </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted mt-auto">
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        &copy; {{ date('Y') }} Copyright:
+        <a class="text-reset fw-bold" href="{{ url('/') }}">Ah ! t'es dispo ?</a>
+        - KUNTZ Basile & LE-NEVEZ Logan
+      </div>
+    </footer>
+
 </body>
+
 </html>

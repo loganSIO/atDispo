@@ -51,20 +51,20 @@
             </div>
 
             <div class="form-group">
-              <label for="start">Couleur</label>
+              <label for="color">Couleur</label>
               <input type="color" class="form-control" name="color" id="color" aria-describeby="helpId" value="#BF4040">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
             <div class="form-group">
               <label for="start">Début</label>
-              <input type="text" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
+              <input type="datetime-local" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
             <div class="form-group">
               <label for="end">Fin</label>
-              <input type="text" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
+              <input type="datetime-local" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
               <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
