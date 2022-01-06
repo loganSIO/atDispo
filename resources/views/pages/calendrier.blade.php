@@ -27,7 +27,6 @@
             <div class="form-group d-none">
               <label for="id">ID</label>
               <input type="text" class="form-control" name="id" id="id" aria-describeby="helpId" placeholder="">
-              <small id="helpId" class="form-text text-muted">Help Text</small>
             </div>
 
             <div class="form-group">
@@ -53,19 +52,19 @@
             <div class="form-group">
               <label for="color">Couleur</label>
               <input type="color" class="form-control" name="color" id="color" aria-describeby="helpId" value="#BF4040">
-              <small id="helpId" class="form-text text-muted">Help Text</small>
+              <small id="helpId" class="form-text text-muted">Mémo couleur : vert = disponible, orange = disponibilité possible mais incertaine, rouge = indisponible</small>
             </div>
 
             <div class="form-group">
               <label for="start">Début</label>
               <input type="datetime-local" class="form-control" name="start" id="start" aria-describeby="helpId" placeholder="Début de l'évènement">
-              <small id="helpId" class="form-text text-muted">Help Text</small>
+              <small id="helpId" class="form-text text-muted">Note : la date est sous format Mois/Jour/Année, l'heure est en format AM = matin / PM = après-midi</small>
             </div>
 
             <div class="form-group">
               <label for="end">Fin</label>
               <input type="datetime-local" class="form-control" name="end" id="end" aria-describeby="helpId" placeholder="Fin de l'évènement">
-              <small id="helpId" class="form-text text-muted">Help Text</small>
+              <small id="helpId" class="form-text text-muted">Note : la date est sous format Mois/Jour/Année, l'heure est en format AM = matin / PM = après-midi</small>
             </div>
 
           </form>
