@@ -28,6 +28,6 @@ class SignupEmailConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_USERNAME'), 'Test')->subject("blabla")->view('mail.confirmation-email', ['email_data' => $this->email_data]);
+        return $this->from(env('MAIL_USERNAME'), 'Ah ? T\'es dispo ?')->subject("Compte confirmé")->view('mail.confirmation-email', ['email_data' => $this->email_data]);
     }
 }

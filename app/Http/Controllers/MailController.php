@@ -13,6 +13,7 @@ class MailController extends Controller
 
       $data = [
         'name' => $name,
+        'email' => $email,
         'verification_code' => $verification_code
       ];
 
