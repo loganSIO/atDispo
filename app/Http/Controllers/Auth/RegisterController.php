@@ -86,8 +86,8 @@ class RegisterController extends Controller
       $user->save();
 
       if($user != null) {
-        MailController::sendSignupEmail($user->name, $user->email, $user->verification_code);
-        return redirect()->back()->with(session()->flash('alert-succes', 'Votre compte a été crée, veuillez attendre qu\'un administrateur le vérifie.'));
+        MailController::sendSignupEmail($user->name, 'loganlenevez@gmail.com', $user->verification_code);
+        return redirect()->back()->with(session()->flash('alert-success', 'Votre compte a été crée, veuillez attendre qu\'un administrateur le vérifie.'));
       }
 
         return redirect()->back()->with(session()->flash('alert-danger', 'Une erreur est survenue, veuillez réesayez.'));
@@ -99,7 +99,8 @@ class RegisterController extends Controller
       if($user != null) {
         $user->is_verified = 1;
         $user->save();
-        return redirect()->route('login')->with(session()->flash('alert-succes', 'Votre compte a été vérifié, vous pouvez vous connecter.'));
+        MailController::sendSignupEmailConfirmation($user->name, $user->email);
+        return redirect()->route('login')->with(session()->flash('alert-success', 'Vous venez de valider le compte de ' . $user->name . ', un e-mail d\'information vient de lui être envoyé.'));
       }
 
       return redirect()->route('login')->with(session()->flash('alert-danger', 'Code de vérification invalide.'));
