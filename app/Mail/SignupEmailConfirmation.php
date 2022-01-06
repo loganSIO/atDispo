@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SignupEmail extends Mailable
+class SignupEmailConfirmation extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,7 +28,6 @@ class SignupEmail extends Mailable
      */
     public function build()
     {
-        return $this->from(env('MAIL_USERNAME'), 'Test')->subject("Vérification mail")->view('mail.signup-email', ['email_data' => $this->email_data]);
+        return $this->from(env('MAIL_USERNAME'), 'Test')->subject("blabla")->view('mail.confirmation-email', ['email_data' => $this->email_data]);
     }
-
 }

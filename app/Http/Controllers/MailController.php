@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SignupEmail;
+use App\Mail\SignupEmailConfirmation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,5 +17,14 @@ class MailController extends Controller
       ];
 
       Mail::to($email)->send(new SignupEmail($data));
+    }
+
+    public static function sendSignupEmailConfirmation($name, $email) {
+
+      $data = [
+        'name' => $name,
+      ];
+
+      Mail::to($email)->send(new SignupEmailConfirmation($data));
     }
 }
