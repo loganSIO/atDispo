@@ -24,6 +24,7 @@ class MailController extends Controller
 
       $data = [
         'name' => $name,
+        'email' => $email
       ];
 
       Mail::to($email)->send(new SignupEmailConfirmation($data));
