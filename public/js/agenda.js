@@ -172,19 +172,29 @@
 
         calendar.render();
 
-        /* Intéractions base de donner */
+        /* Intéractions base de données */
 
-        document.getElementById("btnSauvegarder").addEventListener("click", function(){
-          envoyerDate("/calendrier/ajouter");
-        });
+        // NB : les conditions if servent à vérifier que chaque bouton existe bien avant
+        // de les utiliser. Ce qui permet notamment à un responsable pédagogique
+        // de pouvoir modifier un créneau sans avoir le bouton sauvegarder et supprimer.
 
-        document.getElementById("btnSupprimer").addEventListener("click", function(){
-          envoyerDate("/calendrier/supprimer/"+formulaire.id.value);
-        });
+        if (document.getElementById("btnSauvegarder")) {
+          document.getElementById("btnSauvegarder").addEventListener("click", function(){
+            envoyerDate("/calendrier/ajouter");
+          });
+        }
 
-        document.getElementById("btnModifier").addEventListener("click", function(){
-          envoyerDate("/calendrier/actualiser/"+formulaire.id.value);
-        });
+        if (document.getElementById("btnSupprimer")) {
+          document.getElementById("btnSupprimer").addEventListener("click", function(){
+            envoyerDate("/calendrier/supprimer/"+formulaire.id.value);
+          });
+        }
+
+        if (document.getElementById("btnModifier")) {
+          document.getElementById("btnModifier").addEventListener("click", function(){
+            envoyerDate("/calendrier/actualiser/"+formulaire.id.value);
+          });
+        }
 
         // Actualisation des évènements en temps réel
 
