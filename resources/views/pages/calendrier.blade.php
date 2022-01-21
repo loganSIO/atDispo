@@ -73,7 +73,9 @@
         </div>
         <div class="modal-footer">
 
+          @if(Auth::user()->role=='0')
           <button type="button" class="btn btn-success" id="btnSauvegarder">Sauvegarder</button>
+          @endif
           <button type="button" class="btn btn-warning" id="btnModifier">Modifier</button>
           @if(Auth::user()->role=='0')
           <button type="button" class="btn btn-danger" id="btnSupprimer">Supprimer</button>
